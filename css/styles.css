@@ -28,6 +28,7 @@ body {
   line-height: 14px;
   background-color: #fefefe;
   width: 100%;
+  padding-top: 2em;
   overflow: hidden;
   -webkit-display: flex;
   -moz-display: flex;

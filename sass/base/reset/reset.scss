@@ -23,6 +23,7 @@ body
 	line-height: $font__base;
 	background-color: $white-fe;
 	width: 100%;
+	padding-top: 2em;
 	// height: 100vh;
     overflow: hidden;
 	@include prefix(( 
