@@ -1,0 +1,73 @@
+/**
+ * Device frame styles
+ */
+
+.frame
+{
+    width: 368px;
+    height: 716px;
+    background-image: url(../img/phone_frame.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &--loader
+    {
+        background-image: url(../img/phone_frame_loader.svg);
+    }
+    @include prefix(( 
+		display: flex,
+		align-items: center,
+		justify-content: flex-start,
+		flex-direction: column
+	), webkit moz o ms);
+    &__mask
+    {
+        width: 322px;
+        height: 659px;
+        background-color: transparent;
+        margin-top: 18px;
+        border-radius: 40px;
+        overflow: hidden;
+        position: relative;
+        padding: 0 1.3em;
+        @include prefix(( 
+            display: flex,
+            align-items: center,
+            justify-content: flex-start,
+            flex-direction: column,
+            flex-wrap: wrap,
+        ), webkit moz o ms);
+        .appLogo
+        {
+            width: 15em;
+            img
+            {
+                width: 100%;
+            }
+        }
+        &--center
+        {
+            @include prefix(( 
+            display: flex,
+            align-items: center,
+            justify-content: center,
+        ), webkit moz o ms);
+        }
+        &--isShow
+        {
+            @include prefix(( 
+                transform: scale(1),
+                opacity: 1,
+                display: flex,
+            ), webkit moz o ms);
+        }
+        &--isHide
+        {
+            @include prefix(( 
+                transform: scale(0),
+                opacity: 0,
+                display: none,
+            ), webkit moz o ms);
+        }
+    }
+}

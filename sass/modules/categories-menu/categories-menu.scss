@@ -1,0 +1,101 @@
+/**
+ * categories menu
+ */
+
+ .categoriesMenu
+ {
+     width: 100%;
+     overflow-x: auto;
+     margin: 0 0 1.5em 0;
+     padding: 0;
+     list-style: none;
+     @include prefix(( 
+        display: flex,
+        align-items: center,
+        justify-content: flex-start,
+        flex-direction: row,
+        flex-wrap: nowrap,
+    ), webkit moz o ms);
+     &__item
+     {
+         width: 5.45em;
+         margin: 0 0.8em 0 0;
+         position: relative;
+         cursor: pointer;
+         @include prefix(( 
+            flex: 0 0 auto
+        ), webkit moz o ms);
+        .label
+        {
+            width: 100%;
+            height: 3em;
+            @include text(0.9em, 1em, 0, 0,$family: $headingsFont__family,  $color: $gray-72, $weight: normal);
+            @include prefix(( 
+                display: flex,
+                align-items: center,
+                justify-content: center,
+                flex: 0 0 auto
+            ), webkit moz o ms);
+        }
+        .icon
+        {
+            display: none;
+            @include prefix(( 
+                transform: scale(0),
+                opacity: 0,
+            ), webkit moz o ms);
+        }
+        &--active, &:hover
+        {
+            height: 2.75em;
+            @include prefix(( 
+                display: flex,
+                align-items: center,
+                justify-content: flex-end,
+                flex-direction: column,
+                flex: 0 0 auto
+            ), webkit moz o ms);
+            .label
+            {
+                @include verticalGradient($yellow-5, $yellow);
+                height: 3em;
+                border-radius: 0.45em;
+                padding-bottom: 0.3em;
+                @include text(0.7em, 1em, 0, 0,$family: $headingsFont__family,  $color: $gray-72, $weight: 500);
+                @include prefix(( 
+                    display: flex,
+                    align-items: center,
+                    justify-content: flex-end,
+                    flex-direction: column,
+                    flex: 0 0 auto
+                ), webkit moz o ms);
+            }
+            .icon
+            {
+                width: 1.5em;
+                height: 1.5em;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                box-shadow: 0 0 2px rgba($yellow-2, 0.5);
+                z-index: 2;
+                @include prefix(( 
+                    display: flex,
+                    align-items: center,
+                    justify-content: center,
+                    flex: 0 0 auto,
+                    transform: scale(1),
+                    opacity: 1
+                ), webkit moz o ms);
+                img
+                {
+                    width: 90%;
+                }
+            }
+        }
+     }
+ }

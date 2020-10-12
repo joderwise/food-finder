@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Prototipo Food Finder</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+</head>
+<body>
+    
+</body>
+    <!-- Main frame -->
+    <section class="frame frame--loader" id="main-frame">
+        <article class="frame__mask frame__mask--center frame__mask--isShow" id="loader">
+            <div class="appLogo">
+                <img src="img/ff_logo.svg" alt="">
+            </div>
+        </article>
+        <!-- Search screen mask -->
+        <article class="frame__mask frame__mask--isHide" id="main">
+            <!-- Main Tool Bar -->
+            <div class="toolBar">
+                <!-- Arrow button -->
+                <button class="toolBar__button">
+                    <span class="label icon-arrow"></span>
+                </button>
+                <!-- Section title -->
+                <span class="toolBar__title">Search</span>
+                <!-- Notifications button -->
+                <button class="toolBar__button">
+                    <span class="label icon-bell"></span>
+                    <span class="indicator">0</span>
+                </button>
+            </div>
+
+            <!-- Title -->
+            <article class="title">
+                <h3>Hi, Joan!</h3>
+                <h2>Hungry for more?</h2>
+            </article>
+
+            <!-- Search input -->
+            <div class="finder">
+                <span class="finder__icon icon-search"></span>
+                <input class="finder__input" type="search" placeholder="Search your favorite food">
+            </div>
+
+            <!-- Categories menu -->
+            <ul class="categoriesMenu">
+                <li class="categoriesMenu__item categoriesMenu__item--active">
+                    <span class="icon">
+                        <img src="img/icon_breakfast.svg" alt="">
+                    </span>
+                    <span class="label">Breakfast</span>
+                </li>
+                <li class="categoriesMenu__item">
+                    <span class="icon">
+                        <img src="img/icon_lunch.svg" alt="">
+                    </span>
+                    <span class="label">Lunch</span>
+                </li>
+                <li class="categoriesMenu__item">
+                    <span class="icon">
+                        <img src="img/icon_dinner.svg" alt="">
+                    </span>
+                    <span class="label">Dinner</span>
+                </li>
+                <li class="categoriesMenu__item">
+                    <span class="icon">
+                        <img src="img/icon_snacks.svg" alt="">
+                    </span>
+                    <span class="label">Snacks</span>
+                </li>
+                <li class="categoriesMenu__item">
+                    <span class="icon">
+                        <img src="img/icon_dessert.svg" alt="">
+                    </span>
+                    <span class="label">Dessert</span>
+                </li>
+            </ul>
+
+            <!-- Title -->
+            <article class="title">
+                <h4><strong>Matches for </strong>Breakfast</h4>
+            </article>
+
+            <!-- Restaurant carousel -->
+            <article class="restoCarousel">
+                <!-- Carousel item -->
+                <div class="restoCarousel__item">
+                    <div class="restoCover">
+                        <button class="restoCover__button restoCover__button--active"><span class="label"></span></button>
+                        <img src="img/desayuno.jpg" alt="">
+                    </div>
+                    <div class="restoTitle">
+                        <h3>Laura's Place</h3>
+                        <h4>Best breakfast in town.</h4>
+                    </div>
+                    <div class="restoInfo">
+                        <div class="item">
+                            <span class="icon icon-time"></span>
+                            <span class="data">9am - 9pm</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-budget"></span>
+                            <span class="data">3usd - 8usd</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-star"></span>
+                            <span class="data">5</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="restoCarousel__item">
+                    <div class="restoCover">
+                        <button class="restoCover__button"><span class="label"></span></button>
+                        <img src="img/desayuno_1.jpg" alt="">
+                    </div>
+                    <div class="restoTitle">
+                        <h3>Al Agua Patos</h3>
+                        <h4>Toast and Coffee.</h4>
+                    </div>
+                    <div class="restoInfo">
+                        <div class="item">
+                            <span class="icon icon-time"></span>
+                            <span class="data">9am - 9pm</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-budget"></span>
+                            <span class="data">6usd - 10usd</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-star"></span>
+                            <span class="data">4.5</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="restoCarousel__item">
+                    <div class="restoCover">
+                        <button class="restoCover__button restoCover__button--active"><span class="label"></span></button>
+                        <img src="img/desayuno.jpg" alt="">
+                    </div>
+                    <div class="restoTitle">
+                        <h3>Laura's Place</h3>
+                        <h4>Best breakfast in town.</h4>
+                    </div>
+                    <div class="restoInfo">
+                        <div class="item">
+                            <span class="icon icon-time"></span>
+                            <span class="data">9am - 9pm</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-budget"></span>
+                            <span class="data">3usd - 8usd</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-star"></span>
+                            <span class="data">5</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="restoCarousel__item">
+                    <div class="restoCover">
+                        <button class="restoCover__button"><span class="label"></span></button>
+                        <img src="img/desayuno_1.jpg" alt="">
+                    </div>
+                    <div class="restoTitle">
+                        <h3>Al Agua Patos</h3>
+                        <h4>Toast and Coffee.</h4>
+                    </div>
+                    <div class="restoInfo">
+                        <div class="item">
+                            <span class="icon icon-time"></span>
+                            <span class="data">9am - 9pm</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-budget"></span>
+                            <span class="data">6usd - 10usd</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon icon-star"></span>
+                            <span class="data">4.5</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Title -->
+            <article class="title">
+                <h4><strong>This week promos </strong>Near to you</h4>
+            </article>
+
+            <!-- Promo carousel -->
+            <article class="promoCarousel">
+                <!-- Carousel item -->
+                <div class="promoCarousel__item">
+                    <div class="restoBrand">
+                        <img src="img/logo_wok.png" alt="">
+                        <div class="restoRank">
+                            <span class="icon-star"></span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="promoInfo">
+                        <div class="promoInfo__value">
+                            <span>40%</span>
+                            <span>OFF</span>
+                        </div>
+                        <span class="promoInfo__offer">
+                            In fish dishes
+                        </span>
+                        <span class="promoInfo__date">
+                            Oct 10<sub>th</sub>  -  Oct 11<sub>th</sub>
+                        </span>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="promoCarousel__item">
+                    <div class="restoBrand">
+                        <img src="img/logo_wok.png" alt="">
+                        <div class="restoRank">
+                            <span class="icon-star"></span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="promoInfo">
+                        <div class="promoInfo__value">
+                            <span>40%</span>
+                            <span>OFF</span>
+                        </div>
+                        <span class="promoInfo__offer">
+                            In fish dishes
+                        </span>
+                        <span class="promoInfo__date">
+                            Oct 10<sub>th</sub>  -  Oct 11<sub>th</sub>
+                        </span>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="promoCarousel__item">
+                    <div class="restoBrand">
+                        <img src="img/logo_wok.png" alt="">
+                        <div class="restoRank">
+                            <span class="icon-star"></span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="promoInfo">
+                        <div class="promoInfo__value">
+                            <span>40%</span>
+                            <span>OFF</span>
+                        </div>
+                        <span class="promoInfo__offer">
+                            In fish dishes
+                        </span>
+                        <span class="promoInfo__date">
+                            Oct 10<sub>th</sub>  -  Oct 11<sub>th</sub>
+                        </span>
+                    </div>
+                </div>
+                <!-- Carousel item -->
+                <div class="promoCarousel__item">
+                    <div class="restoBrand">
+                        <img src="img/logo_wok.png" alt="">
+                        <div class="restoRank">
+                            <span class="icon-star"></span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="promoInfo">
+                        <div class="promoInfo__value">
+                            <span>40%</span>
+                            <span>OFF</span>
+                        </div>
+                        <span class="promoInfo__offer">
+                            In fish dishes
+                        </span>
+                        <span class="promoInfo__date">
+                            Oct 10<sub>th</sub>  -  Oct 11<sub>th</sub>
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- App menu -->
+            <div class="appMenu">
+                <!-- Home Button -->
+                <button class="appMenu__button">
+                    <span class="label icon-home"></span>
+                </button>
+                <!-- search Button -->
+                <button class="appMenu__button appMenu__button--active">
+                    <span class="label icon-search"></span>
+                </button>
+                <!-- Like Button -->
+                <button class="appMenu__button">
+                    <span class="label icon-like"></span>
+                </button>
+                <!-- Profile Button -->
+                <button class="appMenu__button">
+                    <span class="label icon-user"></span>
+                </button>
+            </div>
+        </article>
+    </section>
+    <!-- Scripts -->
+    <script>
+        setTimeout(function(){ 
+            document.getElementById('main-frame').classList.remove('frame--loader');
+         }, 3000);
+        setTimeout(function(){ 
+            document.getElementById('main').classList.remove('frame__mask--isHide');
+            document.getElementById('loader').classList.remove('frame__mask--isShow');
+            document.getElementById('loader').classList.add('frame__mask--isHide');
+         }, 4000);
+    </script>
+</html>

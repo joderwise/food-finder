@@ -1,0 +1,47 @@
+/**
+ * Main tool Bar
+ */
+
+ .appMenu
+ {
+     width: 100%;
+     margin: 0;
+     padding: 1.75em;
+     border-radius: 0.45em 0.45em 0 0;
+     box-shadow: 0 0 3px rgba($gray-a5, 0.3);
+     background-color: $white-fe;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     @include prefix(( 
+		display: flex,
+		align-items: center,
+		justify-content: space-around
+    ), webkit moz o ms);
+    &__button
+    {
+        width: 2.3em;
+        height: 2.3em;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        @include prefix(( 
+            display: flex,
+            align-items: center,
+            justify-content: center
+        ), webkit moz o ms);
+        .label
+        {
+            color: $gray-cc;
+            font-size: 1.75em;
+        }
+        &--active, &:hover
+        {
+            .label
+            {
+                color: $yellow;
+                font-size: 1.85em;
+            }
+        }
+    }
+ }

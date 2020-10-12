@@ -1,0 +1,26 @@
+/**
+ * Welcome title
+ */
+
+ .title
+ {
+     width: 100%;
+     padding: 0;
+     margin: 0 0 1.5em 0;
+     h2
+     {
+        @include text(2em, 1.33, 0, 0,$family: $headingsFont__family,  $color: $gray-72, $weight: 500);
+     }
+     h3
+     {
+        @include text(1.33em, 1.16em, 0, 0,$family: $bodyFont__family,  $color: $gray-a5, $weight: 300);
+     }
+     h4
+     {
+        @include text(1.16em, 1.16em, 0, 0,$family: $bodyFont__family,  $color: $gray-72, $weight: 300);
+        strong
+        {
+            font-weight: 600;
+        }
+     }
+ }

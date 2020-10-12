@@ -1,0 +1,84 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face - mixin
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $display: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+	  	$src: append($src, url(quote("../" + $path + "." + $extmod)) format(quote($format)), comma);
+		// FIXME - Change for develop
+		// $src: append($src, url(quote("/assets/" + $path + "." + $extmod)) format(quote($format)), comma);
+
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+		font-display: $display;
+	}
+}
+
+/**
+ * Font familys - include.
+ */
+
+ @include font-face("Mont", fonts/Mont-Thin, 100, normal, swap);
+ @include font-face("Mont", fonts/Mont-Light, 300, normal, swap);
+ @include font-face("Mont", fonts/Mont-Regular, normal, normal, swap);
+ @include font-face("Mont", fonts/Mont-SemiBold, 600, normal, swap);
+ 
+ @include font-face("Avenir", fonts/AvenirNextLTPro-Regular, normal, normal, swap);
+ @include font-face("Avenir", fonts/AvenirNextLTPro-Demi, 500, normal, swap);
+
+ @include font-face("icomoon", fonts/icomoon, normal, normal, block);
+
+// =============================================================================
+// Text elements styles -mixin
+// =============================================================================
+
+@mixin text( $size: $font__size, $line: $font__base, $margin-top: 0, $margin-bottom: 0, $family: $headingsFont__family, $color: black, $weight: normal, $style: normal) {
+    color: $color;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+    font-style: $style;
+}
+
+// Usage
+
+//  h1, .h1
+//  {
+//      @include text(2em, 1.3em, 0, 0, $color: black, $weight: normal);
+//  }
