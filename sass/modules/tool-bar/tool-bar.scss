@@ -38,7 +38,7 @@
             top: 0.4em;
             left: -0.3em;
             padding-top: 0.2em;
-            background-color: $yellow-2;
+            background-color: $yellow;
             @include text(0.8em, 0, 0, 0,$family: $headingsFont__family,  $color: $white-fe, $weight: 500);
             @include prefix(( 
                 display: flex,
